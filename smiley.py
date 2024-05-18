@@ -1,28 +1,30 @@
 from sense_hat import SenseHat
 
-
 class Smiley:
     WHITE = (255, 255, 255)
     GREEN = (0, 255, 0)
     RED = (255, 0, 0)
     YELLOW = (255, 255, 0)
+    BLUE = (0, 0, 255)
     BLANK = (0, 0, 0)
 
-    def __init__(self):
+    def complexion(self):
+        return self.YELLOW
+
+    def __init__(self, complexion=YELLOW):
         # We have encapsulated the SenseHat object
         self.sense_hat = SenseHat()
 
-        Y = self.YELLOW
         O = self.BLANK
         self.pixels = [
-            O, Y, Y, Y, Y, Y, Y, O,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            Y, Y, Y, Y, Y, Y, Y, Y,
-            O, Y, Y, Y, Y, Y, Y, O,
+            O, complexion, complexion, complexion, complexion, complexion, complexion, O,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            complexion, complexion, complexion, complexion, complexion, complexion, complexion, complexion,
+            O, complexion, complexion, complexion, complexion, complexion, complexion, O,
         ]
 
     def dim_display(self, dimmed=True):
